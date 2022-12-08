@@ -27,10 +27,9 @@ async def callback_redemptions(uuid: UUID, data: dict) -> None:
     for entry in sound_byte_dir:
         b = entry.name.split('.')
         sound_list.append(b[0])
-    print(sound_list)
 
     if sound_byte in sound_list:
-        playsound('sounds/'+sound_byte+'.mp3')
+        playsound('sounds/'+sound_byte+'.mp3', False)
 
 
 async def bot():
